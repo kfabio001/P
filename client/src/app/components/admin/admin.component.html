@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+  <title>Título de la página</title>  
+  <meta charset="UTF-8">
+  
+<script>
+    window.addEventListener('load', inicio, false);
+
+    function inicio() {
+        document.getElementById('archivo').addEventListener('change', cargar, false);               
+    }
+
+    function cargar(ev) {
+        document.getElementById('datos').innerHTML='Nombre del archivo:'+ev.target.files[0].name+'<br>'+
+                                                   'Tamaño del archivo:'+ev.target.files[0].size+'<br>'+  
+                                                   'Tipo MIME:'+ev.target.files[0].type;
+        var arch=new FileReader();
+        arch.addEventListener('load',leer,false);
+        arch.readAsText(ev.target.files[0]);
+    }
+    var si =ev.target.result;
+    function leer(ev) {
+        document.getElementById('editor').value=ev.target.result;
+    }
+</script>
+
+</head>
+
+<body>
+ 
+          
+         
+       
+    <table class="table"  >
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">--</th>
+            <th scope="col">REPORTE1</th>
+            <th scope="col">REPORTE3 </th>
+            <th scope="col">REPORTE4</th>
+            <th scope="col">REPORTE6</th>
+            <th scope="col">REPORTE7</th>
+            <th scope="col">AGREGAR ACCIONES</th>
+            
+          </tr>
+        </thead>
+    
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><a  (click)="getReporte1()"class="btn btn-info btn-block">
+                REPORTE1
+              </a></td>
+            <td><a  (click)="getReporte3()"class="btn btn-info btn-block">
+                REPORTE3
+              </a></td>
+            <td><a  (click)="getReporte4()"class="btn btn-info btn-block">
+                REPORTE4
+              </a></td>
+            <td><a  (click)="getReporte6()"class="btn btn-info btn-block">
+                REPORTE6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+              </a></td>
+            <td><a  (click)="getReporte7()"class="btn btn-info btn-block">
+                REPORTE7
+              </a></td>
+             
+            
+          
+          </tr>
+          
+      </table>
+      <table class="table"  *ngFor="let juguet of juguetes" >
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">--</th>
+            <th scope="col">--</th>
+            <th scope="col">-- </th>
+            <th scope="col">--</th>
+            <th scope="col">--</th>
+            <th scope="col">--</th>
+            <th scope="col">--</th>
+            
+          </tr>
+        </thead>
+    
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>{{juguet.idJuguete}}</td>
+            <td>{{juguet.idJuguete}}</td>
+            <td>{{juguet.nombre}}</td>
+            <td>{{juguet.categoria}}</td>
+            <td>{{juguet.bastones}}</td>
+              <td>{{juguet.edad}}</td>
+            
+          
+          </tr>
+          
+      </table>
+    <button class="btn btn-success btn-block" (click)="getSuma() ">
+        Guardar
+      </button>
+
+
+<textarea [(ngModel)]="sumas.Creditos"rows="10" cols="80" id="editor"></textarea>
+<br>
+<p id="datos"></p>
+
+    <div class="card-body">
+      <div class="form-group">
+        <input type="text" name="Nombre" [(ngModel)]="accioness.nombre"rows="2" placeholder="Nombre" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="edad" [(ngModel)]="accioness.descripcion"rows="2" placeholder="descripcion" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="Nick" [(ngModel)]="accioness.bastones"rows="2" placeholder="bastones" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="Contra" [(ngModel)]="accioness.edad"rows="2" placeholder="edad" class="form-control">
+      </div>
+      <a  (click)="crearAccion() " class="btn btn-info btn-block">
+        CREAR ACCION
+      </a>
+    </div>
+</body>
+</html>

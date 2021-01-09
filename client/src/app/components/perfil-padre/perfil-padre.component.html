@@ -1,0 +1,95 @@
+<div class="col-md-4"  >
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+  Nombre: {{padre.Nombre}}
+  ID: {{padre.idPadre}}
+    </div>
+    <div class="card text-left">
+      <div class="card-header  text-black d-flex justify-content-between align-items-center">
+        Total Creditos: {{padre.bastones}}
+      </div>
+  
+      
+    </div>
+    <div class="card-body">
+      
+      Email:{{padre.email}}
+      
+      Telefono: {{padre.telefono}}
+      Nombre Hijo:{{perfilss.nombre}}
+      IDHijo:{{perfilss.idHijo}}
+      BastonesGanados:{{perfilss.bastonesG}}
+      Limite:{{perfilss.bastones}}
+   
+    <a [routerLink]="['/cartasPadre', perfilss.idHijo]"  class="btn btn-info btn-block">
+        VER CARTAS
+      </a>
+
+      
+      
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <input type="text" name="Nombre" [(ngModel)]="perfilss.nombre"rows="2" placeholder="Contraseña" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="edad" [(ngModel)]="perfilss.edad"rows="2" placeholder="Contraseña" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="Nick" [(ngModel)]="perfilss.email"rows="2" placeholder="Contraseña" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="Contra" [(ngModel)]="perfilss.contra"rows="2" placeholder="Contraseña" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="Bastones" [(ngModel)]="perfilss.bastones"rows="2" placeholder="Contraseña" class="form-control">
+      </div>
+   
+
+      <a  (click)="updateHijo2() " class="btn btn-info btn-block">
+        EDITAR HIJO
+      </a>
+      
+      
+    </div>
+  </div>
+  <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+    ACCIONES DE {{perfilss.nombre}}
+       </div>
+  </div>
+  <table class="table" *ngFor="let accion of acciones">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">id </th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Bastones</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Confirmar</th>
+        <th scope="col">Borrar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{accion.idAccion}}</td>
+        <td>{{accion.nombre}}</td>
+        <td>{{accion.descripcion}}</td>
+        <td>{{accion.bastones}}</td>
+        <td>{{accion.edad}}</td>
+        <td><a (click)="getListaAId(accion.idAccion)" (click)="updateHijo(accion.bastones)" class="btn btn-info btn-block">
+          CONFIRMAR
+        </a>
+      </td>
+      <td><a (click)="getListaAIdD(accion.idAccion)" class="btn btn-info btn-block">
+        RECHAZAR
+      </a>
+    </td>
+      </tr>
+      
+  </table>
+  
+  
+  
+    

@@ -1,0 +1,67 @@
+<div class="col-md-4"  >
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+     CARTAS DE  {{perfilss.nombre}}
+         </div>
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+ Nombre: {{perfilss.nombre}}
+   ID: {{perfilss.idHijo}}
+    </div>
+    <div class="card text-left">
+      <div class="card-header  text-black d-flex justify-content-between align-items-center">
+        Total Bastones Ganados: {{perfilss.bastonesG}}   
+      </div>
+  
+      
+    </div>
+    <div class="card-body">
+      Nombre: {{perfilss.nombre}}
+      Nick:{{perfilss.email}}
+      ID Padre:{{perfilss.idPadre}}
+      Edad: {{perfilss.edad}}
+  
+
+      
+    </div>
+    
+     
+    
+  </div>
+  </div>
+ 
+  
+  <table class="table"  *ngFor="let juguet of juguetes">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">id </th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Bastones</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Carta</th>
+        <th scope="col">Pedir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{juguet.idJuguete}}</td>
+        <td>{{juguet.nombre}}</td>
+        <td>{{juguet.categoria}}</td>
+        <td>{{juguet.bastones}}</td>
+        <td>{{juguet.edad}}</td>
+        <td>{{juguet.idCarta}}</td>
+        <td><a  (click)="getCarta(juguet.idCarta)" (click)="updateHijo(juguet.bastones)"class="btn btn-info btn-block">
+          PEDIR
+        </a>
+      </td>
+      </tr>
+      
+  </table>
+  
+  
+  
+    
+  
+  

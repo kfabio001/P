@@ -1,0 +1,64 @@
+<div class="col-md-4"  >
+<div class="card text-center">
+  <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+{{perfilss.nombre}}
+{{perfilss.idHijo}}
+  </div>
+  <div class="card text-left">
+    <div class="card-header  text-black d-flex justify-content-between align-items-center">
+      Total Creditos {{suma.creditos}}   
+    </div>
+
+    
+  </div>
+  <div class="card-body">
+    {{perfilss.nombre}}
+    {{perfilss.email}}
+    {{perfilss.idPadre}}
+    {{perfilss.edad}}
+
+  <a class="btn btn-info btn-block"> 
+    VER CARTAS
+    </a>
+  <a [routerLink]="['/cartas', perfilss.idHijo]" class="btn btn-info btn-block">
+      ENVIAR CARTAS
+    </a>
+  <a  class="btn btn-info btn-block">
+      MENSAJES A ELFOS
+    </a>
+    
+  </div>
+</div>
+</div>
+<table class="table" *ngFor="let accion of acciones">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">id </th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Bastones</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Confirmar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{accion.idAccion}}</td>
+      <td>{{accion.nombre}}</td>
+      <td>{{accion.descripcion}}</td>
+      <td>{{accion.bastones}}</td>
+      <td>{{accion.edad}}</td>
+      <td><a (click)="saveListaAcciones(perfilss.idHijo,accion.idAccion)" class="btn btn-info btn-block">
+        REALIZADO
+      </a>
+    </td>
+    </tr>
+    
+</table>
+
+
+
+  
+

@@ -1,0 +1,49 @@
+<div class="col-md-4 offset-md-2">
+  <div class="card">
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <textarea name="Correo" [(ngModel)]="perfil.email" rows="2" placeholder="Correo" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Contraseña" [(ngModel)]="perfil.contra"rows="2" placeholder="Contraseña" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Nombre" [(ngModel)]="perfil.Nombre" rows="2" placeholder="Nombre" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="NombreHijo" [(ngModel)]="perfilHijo.nombre" rows="2" placeholder="Nombre de Hijo" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Nick" [(ngModel)]="perfilHijo.email" rows="2" placeholder="Nick" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Sexo" [(ngModel)]="perfilHijo.sexo" rows="2" placeholder="Sexo" class="form-control"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <textarea name="Edad" [(ngModel)]="perfilHijo.edad"rows="2" placeholder="Edad" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Dirreccion" [(ngModel)]="perfil.direccion" rows="2" placeholder="Direccion" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Municipio" [(ngModel)]="muni.Municipio"rows="2" placeholder="Municipio" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Departamento"[(ngModel)]="depa.departamento" rows="2" placeholder="Departamento" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Telefono" [(ngModel)]="perfil.telefono" rows="2" placeholder="Telefono" value="telefono5" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Bastones" [(ngModel)]="perfil.bastones" rows="2" placeholder="Bastones" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-success btn-block" (click)="saveNewGame() ">
+          Guardar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+

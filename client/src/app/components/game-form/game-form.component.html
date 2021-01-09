@@ -1,0 +1,37 @@
+<div class="col-md-4"  *ngFor="let perfil of perfils" >
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+  {{perfil.Nombre}}
+  {{perfil.email}}
+    </div>
+   
+    <div class="card-body">
+      {{perfil.Nombre}}
+      {{perfil.bastones}}
+      {{perfil.email}}
+  
+    <a [routerLink]="['/perfil/pensum', perfil.Carnet]" class="btn btn-info btn-block"> VER PENSUM
+      </a>
+    <a [routerLink]="['/perfil/edit/', perfil.Carnet]" class="btn btn-info btn-block">
+        EDITAR
+      </a>
+      <a [routerLink]="['/perfil/myperfil/', perfil.idHijo]" class="btn btn-info btn-block">
+        INICIAR SESION
+      </a>
+    <a [routerLink]="['/perfil/cargaCurso', perfil.Carnet]" class="btn btn-info btn-block">
+        CARGAR DATOS
+      </a>
+    </div>
+  </div>
+  </div>
+
+  
+    <div class="card text-left">
+      <div class="card-header  text-black d-flex justify-content-between align-items-center">
+        Total Creditos {{suma.Creditos}}
+      </div>
+  
+      
+    </div>
+  
+  

@@ -1,0 +1,22 @@
+<div class="col-md-4 offset-md-2">
+  <div class="card">
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <textarea name="Correo" [(ngModel)]="login.email" rows="2" placeholder="Correo" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <textarea name="Contraseña" [(ngModel)]="login.contra"rows="2" placeholder="Contraseña" class="form-control"></textarea>
+        </div>
+        
+        <button class="btn btn-success btn-block" (click)="logins() ">
+          Login
+        </button>
+        <a [routerLink]="['/registro']" class="btn btn-info btn-block">
+          Registro
+        </a>
+      </form>
+    </div>
+  </div>
+</div>
+

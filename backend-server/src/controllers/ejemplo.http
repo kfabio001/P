@@ -1,0 +1,41 @@
+GET http://localhost:3005/user/getUsuarios
+GET http://localhost:3005/user/getHIJO
+GET http://localhost:3005/user/getHijo/45
+GET http://localhost:3005/user/juguetes
+GET http://localhost:3005/user/getDepartamentos
+GET http://localhost:3005/user/getMunicipios
+POST http://localhost:3005/user/login HTTP/1.1
+content-type: application/json
+
+{
+    "email":"email1",
+    "password": "contra1"
+}
+
+POST http://localhost:3005/user/juguetes HTTP/1.1
+content-type: application/json
+
+{
+    "email":"email1",
+    "password": "contra1"
+}
+
+POST http://localhost:3005/user/registroDepartamento HTTP/1.1
+content-type: application/json
+
+{   
+    "email":"email3",
+    "password": "contra3",
+    "nombrePadre": "nombre3",
+    "nombreHijo":"nombre3",
+    "edad":"3",
+    "telefono":"33",
+    "direccion":"direccion3",
+    "municipio":"municipio3",
+    "departamento":"departamento3",
+    "nick":"email3",
+    "sexo":"sexo3",
+    "bastones":"300" 
+}
+//INSERT INTO HIJO(nombre,sexo,edad,email,contra,bastones,bastonesGanados,idPadre) 
+//VALUES('nombre1','sexo1','11','email1','contra1','100','50',1);

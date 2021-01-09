@@ -1,0 +1,67 @@
+<div class="col-md-4"  >
+  <div class="card text-center">
+    <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center ">
+  {{perfilss.nombre}}
+  {{perfilss.idHijo}}
+    </div>
+    <div class="card text-left">
+      <div class="card-header  text-black d-flex justify-content-between align-items-center">
+        Total Creditos {{suma.creditos}}   
+      </div>
+  
+      
+    </div>
+    <div class="card-body">
+      {{perfilss.nombre}}
+      {{perfilss.email}}
+      {{perfilss.idPadre}}
+      {{perfilss.edad}}
+  
+    
+      
+      
+    </div>
+    <div class="form-group">
+      <textarea id="Contenido"  name="Contenido" rows="2" placeholder="Contenido" class="form-control"></textarea>
+    </div>
+    <input type="text" name="title" [(ngModel)]="Carta.fecha" placeholder="Title" class="form-control" autofocus>
+    
+  </div>
+  </div>
+ 
+  
+  <table class="table"  *ngFor="let juguet of juguetes">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">id </th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Bastones</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Pedir</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{juguet.idJuguete}}</td>
+        <td>{{juguet.nombre}}</td>
+        <td>{{juguet.categoria}}</td>
+        <td>{{juguet.bastones}}</td>
+        <td>{{juguet.edad}}</td>
+     
+
+        <td><a  (click)="saveCarta(juguet.idJuguete)"class="btn btn-info btn-block">
+          PEDIR
+        </a>
+      </td>
+      </tr>
+      
+  </table>
+  
+  
+  
+    
+  
+  

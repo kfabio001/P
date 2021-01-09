@@ -1,0 +1,51 @@
+<div class="col-md-4 offset-md-2">
+  <div class="card">
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <input type="text"name="Correo" [(ngModel)]="perfil.email" rows="2" placeholder="Correo" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Contraseña" [(ngModel)]="perfil.contra"rows="2" placeholder="Contraseña" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Nombre" [(ngModel)]="perfil.Nombre" rows="2" placeholder="Nombre" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="NombreHijo" [(ngModel)]="perfilHijo.nombre" rows="2" placeholder="Nombre de Hijo" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Nick" [(ngModel)]="perfilHijo.email" rows="2" placeholder="Nick" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Sexo" [(ngModel)]="perfilHijo.sexo" rows="2" placeholder="Sexo" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <input type="text" name="Edad" [(ngModel)]="perfilHijo.edad"rows="2" placeholder="Edad" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Dirreccion" [(ngModel)]="perfil.direccion" rows="2" placeholder="Direccion" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Municipio" [(ngModel)]="muni.Municipio"rows="2" placeholder="Municipio" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Departamento"[(ngModel)]="depa.departamento" rows="2" placeholder="Departamento" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Telefono" [(ngModel)]="perfil.telefono" rows="2" placeholder="Telefono" value="telefono5" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Bastones" [(ngModel)]="perfil.bastones" rows="2" placeholder="Bastones" class="form-control">
+        </div>
+        <a class="btn btn-success btn-block" (click)="saveNewGame() " [routerLink]="['/login']">
+          Guardar
+        </a>
+        
+      </form>
+    </div>
+  </div>
+</div>
+
+
